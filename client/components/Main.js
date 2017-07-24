@@ -15,7 +15,7 @@ const Main = (props) => {
   const {children, handleClick, isLoggedIn} = props;
 
   return (
-    <div>
+    <div className="container-fluid">
       <h1>BOILERMAKER</h1>
       <nav>
         {

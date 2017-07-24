@@ -7,7 +7,7 @@ router.get('/', (req, res, next) => {
   const author = req.query.author || {};
 
   if (author.length) {
-    Blog.findAll({ where: { authorId: author } })
+    Blog.findAll({ where: { userId: author } })
       .then(blogs => {
         res.send(blogs)
       })

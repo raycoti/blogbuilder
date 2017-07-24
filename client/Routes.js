@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {Router} from 'react-router'
-import {Route, Switch} from 'react-router-dom'
+import {Route, Switch, Redirect} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
 import {Main, Login, Signup, UserHome} from './components'
+import {bloggerContainer, blogsContainer, blogPostContainer} from './containers'
 import {me} from './store'
 
 /**
@@ -27,9 +28,15 @@ class Routes extends Component {
             {/* Routes placed here are available to all visitors */}
             <Route path="/login" component={Login} />
             <Route path="/signup" component={Signup} />
+            <Route exact path="/blogs" component={blogsContainer} />
+            <Route path='/blog/:id' component={blogPostContainer} />
+            <Redirect from="/" to="/blogs" />
             {
               isLoggedIn ?
                 <Switch>
+                  <Route exact path="/newBlog" component={bloggerContainer} />
+            <Route path="/draft/:id" component={bloggerContainer} />
+            <Route path='/preview' component={blogPostContainer} />
                   {/* Routes placed here are only available after logging in */}
                   <Route path="/home" component={UserHome} />
                 </Switch> : null
