@@ -30,7 +30,6 @@ class Routes extends Component {
             <Route path="/signup" component={Signup} />
             <Route exact path="/blogs" component={blogsContainer} />
             <Route path='/blog/:id' component={blogPostContainer} />
-            <Redirect from="/" to="/blogs" />
             {
               isLoggedIn ?
                 <Switch>
@@ -43,6 +42,8 @@ class Routes extends Component {
             }
             {/* Displays our Login component as a fallback */}
             <Route component={Login} />
+            <Redirect from="/" to="/blogs" />
+
           </Switch>
         </Main>
       </Router>

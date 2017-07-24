@@ -9,19 +9,21 @@ const mapStateToProps = (state) => {
     text: state.draft.text,
     current: state.blog.current,
     name: state.blog.name,
+    user: state.user.id,
+
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
     save(text, name) {
-      if (!name || !name.length) name = 'anon';
+      if (!name || !name.length) name = 'Untitled';
       dispatch(setDraft(text))
       dispatch(setName(name))
     },
-    saveOrUpdate(text, id, name) {
-      if (!name || !name.length) name = 'anon';
-      dispatch(saveOrUpdate(text, id, name))
+    saveOrUpdate(text, id, name, userId) {
+      if (!name || !name.length) name = 'Untitled';
+      dispatch(saveOrUpdate(text, id, name, userId))
       dispatch(setName(name))
     },
     setName(name) {
@@ -69,10 +71,11 @@ class BloggerContainer extends Component {
   clickHandler(e) {
     this.props.save(this.state.text, this.state.name);
   }
-  save(e) {
+  save(userId) {
     var id = this.props.current;
+    console.log(id, userId)
     if (id === -1) id = false;
-    this.props.saveOrUpdate(this.state.text, id, this.state.name)
+    this.props.saveOrUpdate(this.state.text, id, this.state.name, userId)
   }
 
   componentDidMount() {
@@ -82,6 +85,7 @@ class BloggerContainer extends Component {
   }
 
   handleMatch(params) {
+    console.log(this.props.current)
     if (Object.keys(params).length) {
       const id = params.id;
       this.props.load(id, this.setDraft)
@@ -124,7 +128,7 @@ class BloggerContainer extends Component {
             <input value={this.state.name} onChange={this.handleName} />
             <button type="submit">Save Name</button>
           </form>
-          <button onClick={this.save}>Save</button>
+          <button onClick={()=>this.save(this.props.user)}>Save</button>
           <Link to='/preview' ><button onClick={this.clickHandler}>Preview</button></Link>
         </div>
       </div>

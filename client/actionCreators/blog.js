@@ -94,27 +94,27 @@ export const parser = (html) => {
   //this.props.set(indexes,types)
 }
 
-export const saveOrUpdate = (text, id, name) => {
+export const saveOrUpdate = (text, id, name, userID) => {
   if (!name || !name.length) {
     name = 'anon'
   }
   return (dispatch) => {
     if (id) {
-      axios.put(`/api/blogs/${id}`, { body: text, name: name })
+      axios.put(`/api/blogs/${id}`, { body: text, name: name, userId: userID })
         .then(() => {
           dispatch(setCurrent(id))
         })
     }
     else {
-      dispatch(save(text, name))
+      dispatch(save(text, name, userID))
     }
   }
 }
 
 
-export const save = (text, name) => {
+export const save = (text, name, userId) => {
   return (dispatch) => {
-    axios.post('/api/blogs', { body: text, name: name })
+    axios.post('/api/blogs', { body: text, name: name, userId: userId })
       .then(blog => dispatch(setCurrent(blog.data.id)))
   }
 }
