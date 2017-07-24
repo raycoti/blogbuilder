@@ -1,0 +1,163 @@
+
+#grad1 {
+    background: -webkit-linear-gradient(left, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, rgba(255,0,0,0), rgba(255,0,0,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1)); /* Standard syntax (must be last) */
+} 
+.imgCircle{
+  border-radius: 20em;
+}
+
+
+
+.iconimg{
+  max-height: 10vh; 
+  max-width: 10vh;
+  border: 0;
+
+}
+
+
+
+.socialcon{
+  margin-bottom: 5vh;
+}
+
+
+#captext {
+  z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 350px;
+}
+
+
+@media screen and (min-width: 480px) {
+  .img3 {
+  object-fit: cover;
+  max-height: 32vh;
+  
+  }
+
+  .iconlink{ 
+  margin: 1em;
+  max-width: 2em; 
+  border-radius: 3em; 
+} 
+.iconlink:hover{
+  max-width: 4em;
+}
+
+  .social{
+    max-height: 20vh; 
+    max-width: 20vh;
+    border-radius: 2em;
+    display:block;
+      margin:auto;
+  }
+
+  .image2 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+  .parallax {
+    /* The image used */
+    /*background-image: url('/images/soulSearching.png');*/
+
+    /* Full height */
+    height: 75vh; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+  img.des{
+    margin: auto;
+    max-width: 50%
+  }
+  .blogg{ 
+  p{
+    img{
+      display: block;
+      margin: auto;
+      max-width: 50%;
+    }
+  }
+}
+  .headImg {
+  margin-top: 0vh;
+}
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+.iconlink{ 
+  margin: 1em;
+  max-width: 3em; 
+  border-radius: 3em; 
+}
+.social{
+  max-height: 10vh; 
+  max-width: 10vh;
+  border-radius: 2em;
+   display:block;
+    margin:auto; 
+}
+#caption { color: white; font-family: 'Open Sans Condensed', sans-serif; font-size: 1.75em; font-weight: 700; line-height: 1em; margin: 2vh 0 2vh; padding: 20px 20px; text-align: center;text-transform: uppercase; }
+.img3 {
+  object-fit: cover;
+  
+}
+  .parallax {
+        background-attachment: scroll;
+        height: 35vh;
+        background-size: cover;
+    }
+       img.des{
+     margin: auto
+    
+  }
+  .blogg{
+  p{
+    img{
+      margin: auto;
+    }
+  }
+}
+  .subheader{
+    top: 35%;
+  }
+
+    .gal{
+    padding: 1vh;
+  }
+.headImg {
+  margin-top: 0vh;
+  height: 40vh;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+}

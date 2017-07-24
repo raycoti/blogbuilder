@@ -1,0 +1,177 @@
+.date { color: #111; display: block; font-family: 'Open Sans', sans-serif; font-size: 16px; position: relative; text-align: center; z-index: 1; }
+
+
+.date:before { border-top: 1px solid #111; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; }
+
+
+.author { color: #111; display: block; font-family: 'Open Sans', sans-serif; font-size: 16px; padding-bottom: 38px; position: relative; text-align: center; z-index: 1; }
+
+
+.author:before { border-top: 1px solid #111; content: ""; position: absolute; top: 12px; left: 0; width: 100%; z-index: -1; }
+
+
+.date span,
+
+.author span { background: #fdfdfd; padding: 0 10px; text-transform: uppercase; }
+
+
+.line { border-top: 1px solid #111; display: block; margin-top: 60px; padding-top: 50px; position: relative; }
+
+
+.read-more { -moz-border-radius: 50%; -moz-transition: all 0.2s ease-in-out; -webkit-border-radius: 50%; -webkit-transition: all 0.2s ease-in-out; background: #111; border-radius: 50%; border: 10px solid #fdfdfd; color: #fff; display: block; font-family: 'Open Sans', sans-serif; font-size: 14px; height: 80px; line-height: 80px; margin: -40px 0 0 -40px; position: absolute; bottom: 0px; left: 50%; text-align: center; text-transform: uppercase; width: 80px; }
+
+
+.read-more:hover { background: #990000; text-decoration: none; }
+
+.white{
+  color: white
+}
+
+h1 {
+  
+   color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 5em; font-weight: 700; line-height: 60px; margin: 0 0 24px; padding: 30px 0px 10px; text-align: center; text-transform: uppercase; 
+}
+
+h2 {
+   color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 2.5em; font-weight: 700; line-height: 48px; margin: 0 0 24px; padding: 30px 30px 10px; text-align: center; text-transform: uppercase; 
+}
+
+h3 {
+   color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 3.5em; font-weight: 700; line-height: 48px; margin: 0 0 24px; text-align: center;
+   }
+p { color: #111; font-family: 'Open Sans', sans-serif; font-size: 1.25em; line-height: 1em; }
+
+
+a { color: grey; text-decoration: none; }
+   div.blog{
+    div.link{
+      background-color: wheat;
+      margin: 2em ;
+      padding: 2em ;
+    }
+  }
+
+
+a:hover { text-decoration: none; color: white; }
+
+@media screen and (min-width: 480px) {
+  .blogg{
+  margin: 7vh 0;
+  h1{
+    padding-bottom: 2vh;
+    width: 66%;
+    margin: auto;
+    text-align: left;
+
+  }
+}
+.text2 {
+  color: white;
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+ h4.cap{
+    color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 2em; font-weight: 700; line-height: 48px; margin: 0 0 0; text-align: center; 
+  }
+
+
+  .projects{
+    margin: 0vh 10vh;
+  }
+  p.subtext { color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 2.5em; font-weight: 700; text-transform: uppercase; line-height: 48px; margin: 1vh 0 3vh; text-align: center; 
+  width:100%;}
+  pre.des{
+     font-size: 2em;
+    color: #333;
+    padding-bottom: 3vh;
+    width: 66%;
+    margin: auto;
+    line-height: 1.5;
+    text-align: left; 
+  }
+   p.des{
+    font-size: 2em;
+    color: #333;
+    padding-bottom: 3vh;
+    width: 66%;
+    margin: auto;
+    line-height: 1.5;
+    text-align: left; 
+    //text-indent: 5vh;
+    //text-indent: 5vh;
+    
+  }
+  h3.des{
+    color: #333;
+    padding-bottom: 2vh;
+    width: 66%;
+    margin: auto;
+    text-align: left;
+  }
+    p.icons{
+    text-align: center; 
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .blogg{
+  margin: .5em 0;
+}
+  
+ 
+
+.text2 {
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  vertical-align: middle;
+  top: 40%;
+  left: 0%;
+  width: 100%;
+  
+}
+
+
+  p.subtext { color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 1.5em; font-weight: 700;text-transform: uppercase; line-height: 5vh; margin: -.1em 0 .2em; 
+  text-align: center; 
+  }
+  div.post{
+    margin-top: 4em;
+  }
+  p.cap{
+    font-size: 1em;
+     margin: 1vh 0 1vh;
+  }
+  p.des{
+    font-size: 1.5em;
+    color: #333;
+    line-height: 1.5;
+    padding-bottom: 1vh;
+     
+    text-align: left;
+    //stext-justify: inter-word;
+  }
+  p.icons{
+    text-align: center; 
+  }
+  h4.cap{
+    color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 1.5em; font-weight: 700; line-height: 48px; margin: 0 0 0; text-align: center; 
+  }
+
+  h3.des{
+  margin-bottom: .7vh;
+}
+
+a.des{
+  color: black;
+  text-decoration: underline
+}
+
+}
