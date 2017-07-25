@@ -94,7 +94,7 @@ export const parser = (html) => {
   //this.props.set(indexes,types)
 }
 
-export const saveOrUpdate = (text, id, name, userID) => {
+export const saveOrUpdate = (text, id, name, userID, history) => {
   if (!name || !name.length) {
     name = 'anon'
   }
@@ -106,15 +106,18 @@ export const saveOrUpdate = (text, id, name, userID) => {
         })
     }
     else {
-      dispatch(save(text, name, userID))
+      dispatch(save(text, name, userID, history))
     }
   }
 }
 
 
-export const save = (text, name, userId) => {
+export const save = (text, name, userId, history) => {
   return (dispatch) => {
-    axios.post('/api/blogs', { body: text, name: name, userId: userId })
-      .then(blog => dispatch(setCurrent(blog.data.id)))
+    axios.post('/api/blogs/', { body: text, name: name, userId: userId })
+      .then(blog => {
+        dispatch(setCurrent(blog.data.id));
+        history.push(`/draft/${blog.data.id}`)
+      })
   }
 }

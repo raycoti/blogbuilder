@@ -6,6 +6,7 @@ import Blogs from '../components/blogs';
 const mapStateToProps = (state) => {
   return {
     blogs: state.blog.blogs,
+    user: state.user.id,
   }
 }
 
@@ -28,7 +29,7 @@ class BlogsContainer extends Component {
   render() {
     return (
       <div>
-        <Blogs deleteBlog={this.props.deleteBlog} blogs={this.props.blogs} />
+        <Blogs deleteBlog={this.props.deleteBlog} blogs={this.props.blogs} user={this.props.user} />
       </div>
     )
   }

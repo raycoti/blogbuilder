@@ -4,9 +4,9 @@ const {Blog} = require('../db/models');
 module.exports = router;
 
 router.get('/', (req, res, next) => {
-  const author = req.query.author || {};
+  const author = req.query.author || null;
 
-  if (author.length) {
+  if (author) {
     Blog.findAll({ where: { userId: author } })
       .then(blogs => {
         res.send(blogs)

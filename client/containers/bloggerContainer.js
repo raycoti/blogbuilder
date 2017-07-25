@@ -14,7 +14,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
   return {
     save(text, name) {
       if (!name || !name.length) name = 'Untitled';
@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     saveOrUpdate(text, id, name, userId) {
       if (!name || !name.length) name = 'Untitled';
-      dispatch(saveOrUpdate(text, id, name, userId))
+      dispatch(saveOrUpdate(text, id, name, userId, ownProps.history))
       dispatch(setName(name))
     },
     setName(name) {
@@ -85,7 +85,7 @@ class BloggerContainer extends Component {
   }
 
   handleMatch(params) {
-    console.log(this.props.current)
+    console.log(this.props.current) //7
     if (Object.keys(params).length) {
       const id = params.id;
       this.props.load(id, this.setDraft)
