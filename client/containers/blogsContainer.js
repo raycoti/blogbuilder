@@ -29,6 +29,7 @@ class BlogsContainer extends Component {
   render() {
     return (
       <div>
+        <h1>Blogs</h1>
         <Blogs deleteBlog={this.props.deleteBlog} blogs={this.props.blogs} user={this.props.user} />
       </div>
     )
