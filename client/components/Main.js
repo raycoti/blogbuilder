@@ -25,9 +25,9 @@ const Main = (props) => {
           isLoggedIn ?
             <div>
               {/* The navbar will show these links after you log in */}
-              <li><Link to="/home">Home</Link></li>
+              <li><Link to="/profile">PROFILE</Link></li>
               <li className="theNav"><NavLink to="/newBlog" activeClassName="active">NEW</NavLink></li>
-              <li><a href="#" onClick={handleClick}>Logout</a></li>
+              <li><a href="#" onClick={handleClick}>LOGOUT</a></li>
             </div> :
             <div>
               {/* The navbar will show these links before you log in */}

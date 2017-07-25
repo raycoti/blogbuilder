@@ -37,11 +37,10 @@ class Routes extends Component {
             <Route path="/draft/:id" component={bloggerContainer} />
             <Route path='/preview' component={blogPostContainer} />
                   {/* Routes placed here are only available after logging in */}
-                  <Route path="/Profile" component={UserHome} />
+                  <Route path="/profile" component={UserHome} />
                 </Switch> : null
             }
             {/* Displays our Login component as a fallback */}
-            <Route component={Login} />
             <Redirect from="/" to="/blogs" />
 
           </Switch>

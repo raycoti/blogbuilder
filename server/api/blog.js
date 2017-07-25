@@ -7,16 +7,16 @@ router.get('/', (req, res, next) => {
   const author = req.query.author || null;
 
   if (author) {
-    Blog.findAll({ where: { userId: author } })
+    return Blog.findAll({ where: { userId: author } })
       .then(blogs => {
-        res.send(blogs)
+       return res.status(200).json(blogs)
       })
       .catch(next)
   }
   else {
-    Blog.findAll() //where author?
+    return Blog.findAll() //where author?
       .then((blogs) => {
-        res.send(blogs)
+        return res.status(200).json(blogs)
       })
       .catch(next)
   }
@@ -25,7 +25,7 @@ router.get('/', (req, res, next) => {
 router.get('/:id', (req, res, next) => {
   Blog.findById(req.params.id)
     .then((blog) => {
-      res.send(blog)
+      return res.send(blog)
     })
     .catch(next)
 });
