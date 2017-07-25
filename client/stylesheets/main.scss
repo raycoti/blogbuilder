@@ -1,0 +1,23 @@
+@import 'background';
+@import 'navbar'; 
+@import 'text';
+@import 'images';
+li {list-style-type: none}
+.myEditor{ 
+  height: 70vh;
+  .quill{
+    height: 100%;
+    .ql-container {
+      height: 95%;
+    }
+  } 
+}
+
+
+
+
+body {
+  padding-top: 6vh;
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}

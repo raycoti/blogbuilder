@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
-import {withRouter, Link} from 'react-router-dom'
+import {withRouter, Link, NavLink} from 'react-router-dom'
 import {logout} from '../store'
-
+import NavBar from './navbar'
 /**
  * COMPONENT
  *  The Main component is our 'picture frame' - it displays the navbar and anything
@@ -15,22 +15,28 @@ const Main = (props) => {
   const {children, handleClick, isLoggedIn} = props;
 
   return (
-    <div>
-      <h1>BOILERMAKER</h1>
-      <nav>
+    <div className="container-fluid">
+      <nav className="navbar navbar-fixed-top navbar-toggleable-md navbar-light bg-faded">
+        <div id="navigation" className="col-md-12 thenav">
+          <ul>
+          <li className="theNav"><NavLink exact to="/" activeClassName="active">HOME</NavLink></li>
+          <li className="theNav"><NavLink to="/blogs" activeClassName="active">BLOGS</NavLink></li>
         {
           isLoggedIn ?
             <div>
               {/* The navbar will show these links after you log in */}
-              <Link to="/home">Home</Link>
-              <a href="#" onClick={handleClick}>Logout</a>
+              <li><Link to="/home">Home</Link></li>
+              <li className="theNav"><NavLink to="/newBlog" activeClassName="active">NEW</NavLink></li>
+              <li><a href="#" onClick={handleClick}>Logout</a></li>
             </div> :
             <div>
               {/* The navbar will show these links before you log in */}
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Sign Up</Link>
+             <li><Link to="/login">Login</Link> </li>
+             <li><Link to="/signup">Sign Up</Link> </li>
             </div>
         }
+            </ul>
+          </div>
       </nav>
       <hr />
       {children}
