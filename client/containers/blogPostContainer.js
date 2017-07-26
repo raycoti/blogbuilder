@@ -73,6 +73,7 @@ class BlogPostContainer extends Component {
       <div className="container-fluid" >
         <div className="blogg" >
           <h1>{name}</h1>
+          <hr />
           {indexes.map((index, i) => {
             const theString = html.substring(index.s, index.e);
 

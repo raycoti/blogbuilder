@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Blogs = function ({ blogs, deleteBlog, user}) {
+  console.log(Array.name.slice(-3).toUpperCase())
   return (
     <div className="container" >
       {blogs.map(blog => {
