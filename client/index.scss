@@ -1,6 +1,7 @@
 @import './stylesheets/main'; 
 body {
   font-family: sans-serif;
+  margin-top: 2em;
 
   a {
     text-decoration: none;
@@ -8,15 +9,40 @@ body {
 
   label {
     display: block;
+    text-align: center;
   }
-
+  
+  .login{
+    width: 100%;
+    margin: auto;
+    display: block;
+  }
+  .loginbtn{
+    width: 50%;
+    margin: auto;
+    display: block;
+  }
 
   form{
     margin: auto;
     margin-top: 2em;
+ 
   div {
     margin: 1em;
     display: inline-block;
   }
   } 
+  .google{
+    text-align: center;
+    margin-bottom: 2em;
+    a{
+    background-color: aquamarine;
+        padding: 1em;
+      border-radius: 3em;
+      font-size: 1.5em;
+
+    }
+
+  }
+
 }

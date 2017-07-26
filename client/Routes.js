@@ -33,13 +33,13 @@ class Routes extends Component {
             {
               isLoggedIn ?
                 <Switch>
-                            <Route component={Home} />
 
                   <Route exact path="/newBlog" component={bloggerContainer} />
             <Route path="/draft/:id" component={bloggerContainer} />
             <Route path='/preview' component={blogPostContainer} />
                   {/* Routes placed here are only available after logging in */}
                   <Route path="/profile" component={UserHome} />
+                  <Route component={Home} />
                 </Switch> : null
             }
             {/* Displays our Login component as a fallback */}
