@@ -39,7 +39,7 @@ h2 {
 h3 {
    color: #111; font-family: 'Open Sans Condensed', sans-serif; font-size: 3.5em; font-weight: 700; line-height: 48px; margin: 0 0 24px; text-align: center;
    }
-p { color: #111; font-family: 'Open Sans', sans-serif; font-size: 1.25em; line-height: 1em; }
+p {pcolor:p#111; font-family: 'Open Sans', sans-serif; font-size: 1.25em; line-height: 1em; }
 
 
 a { color: grey; text-decoration: none; }
@@ -56,7 +56,7 @@ a:hover { text-decoration: none; color: white; }
 
 @media screen and (min-width: 480px) {
   .blogg{
-  margin: 7vh 0;
+  margin: 0 0;
   h1{
     padding-bottom: 2vh;
     width: 66%;
@@ -89,10 +89,10 @@ a:hover { text-decoration: none; color: white; }
   pre.des{
      font-size: 2em;
     color: #333;
-    padding-bottom: 3vh;
+    margin-bottom: 3em;
     width: 66%;
     margin: auto;
-    line-height: 1.5;
+    margin-bottom: 3vh;
     text-align: left; 
   }
    p.des{
