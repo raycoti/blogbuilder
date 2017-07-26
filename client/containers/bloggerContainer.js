@@ -56,7 +56,6 @@ class BloggerContainer extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log('hello')
     this.props.setName(this.state.name);
   }
 
@@ -65,7 +64,6 @@ class BloggerContainer extends Component {
   }
   handleName(e) {
     const name = e.target.value
-    console.log(name)
     this.setState({ name: name })
   }
   clickHandler(e) {
@@ -73,7 +71,6 @@ class BloggerContainer extends Component {
   }
   save(userId) {
     var id = this.props.current;
-    console.log(id, userId)
     if (id === -1) id = false;
     this.props.saveOrUpdate(this.state.text, id, this.state.name, userId)
   }
@@ -85,7 +82,6 @@ class BloggerContainer extends Component {
   }
 
   handleMatch(params) {
-    console.log(this.props.current) //7
     if (Object.keys(params).length) {
       const id = params.id;
       this.props.load(id, this.setDraft)

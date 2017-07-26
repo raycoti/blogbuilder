@@ -1,32 +1,18 @@
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
-import { setExample } from '../actionCreators/example';
-import NavBar from '../components/navbar';
-
-const mapStateToProps = (state) => {
-  return {
-    info: state.example.info
-  }
-}
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setExample(text) {
-      dispatch(setExample(text));
-    },
-  }
-}
 
 class HomeContainer extends Component {
   constructor() {
     super()
   }
   componentWillMount() {
+    console.log('hi')
   }
   render() {
     return (
       <div className="container-fluid" >
         <div className="col-md-12">
-          <h1>{this.props.info}</h1>
+          <h1>Welcome</h1>
 
         </div>
       </div>
@@ -34,4 +20,6 @@ class HomeContainer extends Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)
+//export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)
+
+export default HomeContainer;

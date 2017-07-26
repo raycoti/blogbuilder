@@ -5,7 +5,7 @@ import {Route, Switch, Redirect} from 'react-router-dom'
 import PropTypes from 'prop-types'
 import history from './history'
 import {Main, Login, Signup, UserHome} from './components'
-import {bloggerContainer, blogsContainer, blogPostContainer} from './containers'
+import {bloggerContainer, blogsContainer, blogPostContainer, Home} from './containers'
 import {me} from './store'
 
 /**
@@ -33,16 +33,17 @@ class Routes extends Component {
             {
               isLoggedIn ?
                 <Switch>
+
                   <Route exact path="/newBlog" component={bloggerContainer} />
             <Route path="/draft/:id" component={bloggerContainer} />
             <Route path='/preview' component={blogPostContainer} />
                   {/* Routes placed here are only available after logging in */}
                   <Route path="/profile" component={UserHome} />
+                  <Route component={Home} />
                 </Switch> : null
             }
             {/* Displays our Login component as a fallback */}
-            <Redirect from="/" to="/blogs" />
-
+            <Route component={Home} />
           </Switch>
         </Main>
       </Router>
