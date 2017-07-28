@@ -14,7 +14,7 @@ router.get('/', (req, res, next) => {
       .catch(next)
   }
   else {
-    return Blog.findAll() //where author?
+    return Blog.findAll()
       .then((blogs) => {
         return res.status(200).json(blogs)
       })
