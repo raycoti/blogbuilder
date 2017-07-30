@@ -9,6 +9,8 @@ const db = require('./db')
 const store = new SequelizeStore({db})
 const PORT = process.env.PORT || 8080
 const app = express()
+const cors = require('cors')
+
 const socketio = require('socket.io')
 module.exports = app
 
@@ -47,6 +49,7 @@ const createApp = () => {
   }))
   app.use(passport.initialize())
   app.use(passport.session())
+  app.use(cors())
 
   // auth and api routes
   app.use('/auth', require('./auth'))
